@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'a7w&m_mnp$xsez$$y#$gyr0fn2x5qfi0-&45)ft)0a#ru$@sx*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('debug') == 'true'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pk-france.com', '127.0.0.1']
 
 # Application definition
 
