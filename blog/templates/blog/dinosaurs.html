@@ -1,0 +1,87 @@
+{% extends 'pkfrance/base.html' %}
+
+{% block content %}
+    <div class="container mt-3">
+
+        <div class="row">
+            <div class="col-md-8">
+
+                <div class="row">
+                    {% for dinosaur in object_list %}
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <a href="{% url 'dinosaur' dinosaur.pk %}">
+                                    <img class="card-img-top" src="/{{ dinosaur.image1.url }}"
+                                         alt="{{ dinosaur.name }}">
+                                </a>
+
+                                <div class="card-body">
+                                    <h2 class="card-title">{{ dinosaur.name }}</h2>
+                                    <p class="card-text">
+                                        {{ dinosaur.description|truncatewords:30 }}
+                                    </p>
+                                    <a href="{% url 'dinosaur' dinosaur.pk %}" class="btn btn-link">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+                <!-- Search Widget -->
+                <div class="card mb-4">
+                    <h5 class="card-header">Recherche</h5>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Nom ...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Classification</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#">lorem</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">lorem</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">lorem</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#">lorem</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">lorem</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">lorem</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,391 @@
+{% extends 'pkfrance/base.html' %}
+{% load static %}
+
+{% block title %}Communauté francais de prehistoric kingdom{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/timeline.min.css' %}">
+{% endblock %}
+
+{% block content %}
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>First Slide</h3>
+                        <p>This is a description for the first slide.</p>
+                    </div>
+                </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Second Slide</h3>
+                        <p>This is a description for the second slide.</p>
+                    </div>
+                </div>
+                <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Third Slide</h3>
+                        <p>This is a description for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="my-5 text-center text-blue" id="about">
+            Prehistoric Kingdom est un jeu de gestion d’un parc rempli de dinosaures et d’animaux disparus sur une
+            île.
+        </h1>
+        <p class="lead text-justify">
+            Développé depuis 2014 par une équipe internationale de développeurs réunie dans le studio indépendant Shadow
+            Raven, le jeu sortira en Early access sur Steam en novembre 2018, uniquement sur PC. Le succès de son
+            financement (à 160%) sur Kickstarter l’a véritablement fait prendre de l’essor. Vous pouvez continuer à
+            soutenir
+            le jeu et le réserver sur Crytivo, à partir de 16€. Une Démo Pre-Alpha est d’ores et déjà disponible sur
+            Steam.
+        </p>
+
+        <hr class="mt-5 mb-5">
+
+        <!-- Card section -->
+    </div>
+    <div class="bg-green">
+        <div class="container">
+            <h2 class="pt-4 pb-4">Dino fact</h2>
+
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100 bg-light text-dark">
+                        <h4 class="card-header">Title</h4>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                                necessitatibus neque.<br><br>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                                necessitatibus neque.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100  bg-light text-dark">
+                        <h4 class="card-header">Title</h4>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                                necessitatibus neque.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                                necessitatibus neque.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                                necessitatibus neque.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100 bg-light text-dark">
+                        <h4 class="card-header">Title</h4>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                                necessitatibus neque.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+
+
+    <!-- News Section -->
+    <div class="container">
+
+        <h2 class="pt-4 pb-4">Articles</h2>
+
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a class="text-success" href="#">Présentation</a>
+                        </h4>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                            aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt,
+                            dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a class="text-success" href="#">Gameplay</a>
+                        </h4>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra
+                            euismod odio, gravida pellentesque urna varius vitae.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a class="text-success" href="#">Fonctionnalités</a>
+                        </h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam,
+                            error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere
+                            atque iure perspiciatis mollitia recusandae vero vel quam!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+        <!-- Timeline Section -->
+        <h2 class="pt-4 pb-4" id="timeline">Timeline</h2>
+
+        <ul class="timeline">
+            <!-- Item 1 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Lancement du projet</span>
+                        <span class="time-wrapper"><span class="time">2014</span></span>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 2 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Kickstarter</span>
+                        <span class="time-wrapper"><span class="time">Dec 2014 - Jan 2018</span></span>
+                    </div>
+                    <div class="desc">
+                        2013 contributeur en tout et plus de 88900$ levés
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 3 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Jurrassic Patch</span>
+                        <span class="time-wrapper"><span class="time">4 mars 2018</span></span>
+                    </div>
+                    <div class="desc">
+                        Nouveaux bâtiments, nouvelles espèces
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 4 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">PHASE ALPHA</span>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 5 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Gestion Appronfondie</span>
+                    </div>
+                    <div class="desc">
+                        Fossiles, systèmes de recherche ...
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 6 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Terraforming</span>
+                    </div>
+                    <div class="desc">
+                        Ajout du terrain painting et améliorations
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 7 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Contenu additionnel</span>
+                    </div>
+                    <div class="desc">
+                        Nouveaux animaux, bâtiments, maps
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 8 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Béta fermée</span>
+                    </div>
+                    <div class="desc">
+                        Les contributeurs Kickstarter recoivent leur clé
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 9 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">EARLY ACCESS</span>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 10 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Animaux & bâtiments</span>
+                    </div>
+                    <div class="desc">
+                        Ajout continu des animaux et bâtiments issus de l'Early access
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 11 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Maps et climats</span>
+                    </div>
+                    <div class="desc">
+                        Implantation de nouvelles maps et climats
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 12 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Patch "Marine content"</span>
+                    </div>
+                    <div class="desc">
+                        Mise à jour introduisant des animaux marins et de nouveaux mécanismes de jeu assocés
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 13 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Patch "Aerial content"</span>
+                    </div>
+                    <div class="desc">
+                        Mise à jour introduisant des animaux aériens et de nouveaux mécanismes de jeu
+                        associés
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 14 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Mode Campagne</span>
+                    </div>
+                    <div class="desc">
+                        Sénarios et missions à objectifs
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 15 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Mode Ranger</span>
+                    </div>
+                    <div class="desc">
+                        Vue à la 1ère personne et à la 3ème personne autorisant le joueur à marcher
+                        dans le parc comme un ranger
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 16 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">FULL RELEASE</span>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+        <!-- /.row -->
+
+
+        <!-- Team Section -->
+        <h2 class='pt-4 pb-4' id="#team">Team</h2>
+
+        <!-- /.row -->
+
+
+    </div>
+{% endblock %}

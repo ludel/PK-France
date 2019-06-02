@@ -1,0 +1,18 @@
+{% extends 'pkfrance/base.html' %}
+
+{% block title %}Article et actualités{% endblock %}
+
+{% block content %}
+    <div class="container mt-3">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">
+            {{ object.title }}
+        </h1>
+        <img class="img-fluid rounded float-left m-4" src="{{ object.url_image }}" alt="{{ object.title }}" width="500">
+        {{ object.body|safe }}
+
+        <p class="text-right">Poster par <em>{{ object.author }}</em> le {{ object.date|date }}</p>
+
+    </div>
+{% endblock %}
