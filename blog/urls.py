@@ -2,6 +2,7 @@ from django.urls import path
 from django.views.generic import DetailView, ListView
 
 from blog.models import Article, Dinosaur
+from blog.views import FactView
 
 urlpatterns = [
     # Article section
@@ -11,4 +12,8 @@ urlpatterns = [
     # Dinosaur section
     path('dinosaurs/', ListView.as_view(template_name='blog/dinosaurs.html', model=Dinosaur), name='dinosaurs'),
     path('dinosaur/<int:pk>/', DetailView.as_view(template_name='blog/dinosaur.html', model=Dinosaur), name='dinosaur'),
+
+    # Fact section
+    path('fact/', FactView.as_view(), name='fact'),
+
 ]
