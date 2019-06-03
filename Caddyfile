@@ -1,7 +1,7 @@
 pk-france.com {
   proxy /  localhost:8000 {
       transparent
-      except /static
+      except /static /media
     }
       gzip
       log stdout
