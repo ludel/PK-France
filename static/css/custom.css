@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.text-blue {
+    color: #22427C;
+}
+
+.text-red {
+    color: #cf000f;
+}
+
+.text-green {
+    color: #26c281;
+}
+
+.bg-green {
+    background-color: #26c281;
+    color: white;
+}
+
+
+.bg-green-dark {
+    background-color: #4daf7c;
+    color: white;
+}
+
+.bg-blue {
+    background-color: #285d9d;
+    color: white;
+}
+
+.bg-blue-dark {
+    background-color: #22427C;
+    color: white;
+}
+
+
+.footer-first {
+    margin-top: 30px;
+    color: white;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background-color: #26c281;
+}
+
+.footer-second {
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: #4daf7c;
+}
+
+
+hr {
+    background-color: #96c23a;
+}
+
+
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+
+body {
+    padding-top: 4.25rem;
+}
+
+.carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

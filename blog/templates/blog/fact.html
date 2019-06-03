@@ -1,0 +1,23 @@
+<hr class="w-50">
+
+<div class="container">
+    <h2 class="text-center pt-4 pb-4" id="timeline">Dino facts</h2>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="card-img-top" src="/{{ fact.image.url }}" alt="image dinosaure">
+                </div>
+                <div class="col-md-8 m-auto">
+                    <blockquote class="blockquote mb-0">
+                        <p>{{ fact.body }}</p>
+                        <footer class="blockquote-footer">
+                            Publié par <cite title="Source Title">{{ fact.author }}</cite>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
