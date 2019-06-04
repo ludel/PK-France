@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+from pkfrance.fields import ResizeImageField
+
 
 class Article(models.Model):
     title = models.CharField(max_length=250)
@@ -8,12 +10,7 @@ class Article(models.Model):
     body = models.TextField()
     date = models.DateField('date published', auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.PROTECT)
-    image = models.ImageField()
-
-    def save(self, *args, **kwargs):
-        self.image.name = f'article/{self.image.name}'
-
-        super(Article, self).save(*args, **kwargs)
+    image = ResizeImageField(size=[700, 400], upload_to='article')
 
     def __str__(self):
         return f'{self.pk} - {self.title}'
@@ -28,16 +25,9 @@ class Dinosaur(models.Model):
     classification = models.CharField(max_length=200)
     description = models.TextField()
     in_game = models.TextField()
-    image1 = models.ImageField()
-    image2 = models.ImageField()
-    image3 = models.ImageField()
-
-    def save(self, *args, **kwargs):
-        self.image1.name = f'dinosaur/{self.name}/{self.image1.name}'
-        self.image2.name = f'dinosaur/{self.name}/{self.image2.name}'
-        self.image3.name = f'dinosaur/{self.name}/{self.image3.name}'
-
-        super(Dinosaur, self).save(*args, **kwargs)
+    image1 = ResizeImageField(size=[700, 400], upload_to='dinosaur')
+    image2 = ResizeImageField(size=[700, 400], upload_to='dinosaur')
+    image3 = ResizeImageField(size=[700, 400], upload_to='dinosaur')
 
     def __str__(self):
         return self.name
@@ -47,9 +37,4 @@ class Fact(models.Model):
     body = models.CharField(max_length=200)
     author = models.ForeignKey(User, on_delete=models.PROTECT)
     date = models.DateField('date published', auto_now_add=True)
-    image = models.ImageField()
-
-    def save(self, *args, **kwargs):
-        self.image.name = f'fact/{self.image.name}'
-
-        super(Fact, self).save(*args, **kwargs)
+    image = ResizeImageField(size=[350, 200], upload_to='fact')
