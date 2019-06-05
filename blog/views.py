@@ -15,7 +15,7 @@ class FactView(View):
         if request.is_ajax():
             facts = get_list_or_404(Fact)
 
-            rand = random.randint(0, facts.count() - 1)
+            rand = random.randint(0, len(facts) - 1)
             payload['fact'] = facts[rand]
 
         return render(request, self.template_name, payload)

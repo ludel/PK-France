@@ -20,7 +20,7 @@
                                     <p class="card-text">
                                         {{ dinosaur.description|truncatewords:30 }}
                                     </p>
-                                    <a href="{% url 'dinosaur' dinosaur.pk %}" class="btn btn-link">Voir plus</a>
+                                    <a href="{{ dinosaur.get_absolute_url }}" class="btn btn-link">Voir plus</a>
                                 </div>
                             </div>
                         </div>

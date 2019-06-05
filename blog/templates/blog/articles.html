@@ -16,7 +16,7 @@
                                 {{ article.title }}
                             </h2>
                             <p class="card-text">{{ article.summary }}
-                                <a href="{% url 'article' article.pk %}" class="btn btn-link ml-3 p-0">Voir plus</a>
+                                <a href="{{ article.get_absolute_url }}" class="btn btn-link ml-3 p-0">Voir plus</a>
                             </p>
 
                             Poster le {{ article.date|date }} par <em>{{ article.author }}</em>
