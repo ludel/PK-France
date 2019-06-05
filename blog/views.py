@@ -1,6 +1,6 @@
 import random
 
-from django.http import HttpResponseNotFound
+from django.shortcuts import get_list_or_404
 from django.shortcuts import render
 from django.views import View
 
@@ -13,12 +13,9 @@ class FactView(View):
     def get(self, request):
         payload = {}
         if request.is_ajax():
-            facts = Fact.objects.all()
+            facts = get_list_or_404(Fact)
 
-            if not facts.exists():
-                return HttpResponseNotFound()
-
-            rand = random.randint(0, facts.count()-1)
+            rand = random.randint(0, facts.count() - 1)
             payload['fact'] = facts[rand]
 
         return render(request, self.template_name, payload)

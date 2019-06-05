@@ -1,4 +1,5 @@
 {% extends 'pkfrance/base.html' %}
+
 {% block content %}
     <div class="container mt-3">
         {% for article in object_list %}
@@ -6,8 +7,8 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-4 m-auto">
-                            <a href="{% url 'article' article.pk %}">
-                                <img class="img-fluid rounded " src="/{{ article.image.url }}" alt="{{ article.title }}">
+                            <a href="{{ article.get_absolute_url }}">
+                                <img class="img-fluid rounded " src="{{ article.image.url }}" alt="{{ article.title }}">
                             </a>
                         </div>
                         <div class="col-lg-8">

@@ -10,8 +10,8 @@
                     {% for dinosaur in object_list %}
                         <div class="col-md-6">
                             <div class="card mb-4">
-                                <a href="{% url 'dinosaur' dinosaur.pk %}">
-                                    <img class="card-img-top" src="/{{ dinosaur.image1.url }}"
+                                <a href="{{ dinosaur.get_absolute_url }}">
+                                    <img class="card-img-top" src="{{ dinosaur.image1.url }}"
                                          alt="{{ dinosaur.name }}">
                                 </a>
 

@@ -15,5 +15,4 @@ urlpatterns = [
 
     # Fact section
     path('fact/', FactView.as_view(), name='fact'),
-
 ]
