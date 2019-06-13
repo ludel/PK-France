@@ -10,6 +10,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
 
     {% block head %}{% endblock %}
 
@@ -28,7 +29,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container">
             <a class="navbar-brand mr-0" href="/">
-                <img src="{% static 'img/banner.png' %}" alt="pk france" />
+                <img src="{% static 'img/banner.png' %}" alt="pk france"/>
             </a>
             <a class="navbar-brand d-none d-md-block" href="/">
                 <span class="text-blue font-weight-bold m-auto">PREHISTORIC KINGDOM</span>
@@ -86,15 +87,29 @@
     <div class="footer-first text-center">
         <div class="container">
             <div class="row">
-                <div class="col">Précommandez le jeu</div>
-                <div class="col">Demo pre-alpha</div>
-                <div class="col">@PK_france - @PrehistoricKingdomFR</div>
+                <div class="col-md-4">
+                    <a href="https://crytivo.com/en/prehistoric-kingdom" target="_blank" class="text-white">
+                        Précommandez le jeu
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://store.steampowered.com/app/666150/Prehistoric_Kingdom/" class="text-white">
+                        Démo Pre-Alpha
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://twitter.com/PK_France?lang=fr" class="text-white" target="_blank">
+                        <i class="fab fa-twitter"></i> PK_france</a>
+                    -
+                    <a href="https://www.facebook.com/PrehistoricKingdomFR/" class="text-white" target="_blank">
+                        <i class="fab fa-facebook-f"></i> PrehistoricKingdomFR</a>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="footer-second">
-        <p class="text-center">Prehistoric Kingdom FR- Tous droits résévés © Copyright 2019</p>
+        <p class="text-center">Prehistoric Kingdom FR- Tous droits réservés © Copyright 2019</p>
     </div>
 </footer>
 <!-- /.container -->
