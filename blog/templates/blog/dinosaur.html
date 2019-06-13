@@ -1,4 +1,29 @@
 {% extends 'pkfrance/base.html' %}
+
+{% block title %}Fiche {{ object.name }}{% endblock %}
+
 {% block content %}
-    {{ object }}
+    <div class="container mt-4">
+        <h1>{{ object.name }}</h1>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <img class="img-fluid rounded img-thumbnail" src="{{ object.image1.url }}" alt="1 {{ object.name }}">
+            </div>
+
+            <div class="col-md-6  m-auto">
+                <ul class="list-group">
+                    <li class="list-group-item text-center">{{ object.name }} - {{ object.nickname }}</li>
+                    <li class="list-group-item">Taille {{ object.height }}</li>
+                    <li class="list-group-item">Poids {{ object.weight }}</li>
+                    <li class="list-group-item">Periode {{ object.period }}</li>
+                    <li class="list-group-item">Classification{{ object.classification }}</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="lead">
+            {{ object.description|safe }}
+        </p>
+    </div>
 {% endblock %}
