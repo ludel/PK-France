@@ -23,6 +23,6 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='pkfrance/index.html'), name='index'),
 
     path('blog/', include('blog.urls')),
-    path('admin/', admin.site.urls),
+    path('dj-admin/', admin.site.urls),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
