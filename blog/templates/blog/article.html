@@ -10,9 +10,12 @@
             {{ object.title }}
         </h1>
         <img class="img-fluid rounded float-left m-4" src="{{ object.image.url }}" alt="{{ object.title }}" width="450">
-        {{ object.body|safe }}
 
-        <p class="text-right">Poster par <em>{{ object.author }}</em> le {{ object.date|date }}</p>
+        <p class="lead">
+            {{ object.body|safe }}
+        </p>
+
+        <p class="text-right">Posté par <em>{{ object.author }}</em> le {{ object.date|date }}</p>
 
     </div>
 {% endblock %}
