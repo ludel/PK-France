@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
+from markdownx.models import MarkdownxField
+from markdownx.utils import markdownify
 
 from pkfrance.fields import ResizeImageField
 
@@ -8,13 +10,17 @@ from pkfrance.fields import ResizeImageField
 class Article(models.Model):
     title = models.CharField(max_length=250)
     summary = models.TextField(max_length=550)
-    body = models.TextField()
+    body = MarkdownxField()
     date = models.DateField('date published', auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.PROTECT)
     image = ResizeImageField(size=[700, 400], upload_to='article')
 
     def get_absolute_url(self):
         return reverse('article', args=[self.pk])
+
+    @property
+    def markdown_body(self):
+        return markdownify(self.body)
 
     def __str__(self):
         return f'{self.pk} - {self.title}'
@@ -27,7 +33,7 @@ class Dinosaur(models.Model):
     weight = models.CharField(max_length=20)
     period = models.CharField(max_length=20)
     classification = models.CharField(max_length=200)
-    description = models.TextField()
+    description = MarkdownxField()
     in_game = models.TextField()
     image1 = ResizeImageField(size=[700, 400], upload_to='dinosaur')
     image2 = ResizeImageField(size=[700, 400], upload_to='dinosaur')
@@ -35,6 +41,10 @@ class Dinosaur(models.Model):
 
     def get_absolute_url(self):
         return reverse('dinosaur', args=[self.pk])
+
+    @property
+    def markdown_description(self):
+        return markdownify(self.description)
 
     def __str__(self):
         return self.name

@@ -12,7 +12,7 @@
         <img class="img-fluid rounded float-left m-4" src="{{ object.image.url }}" alt="{{ object.title }}" width="450">
 
         <p class="lead">
-            {{ object.body|safe }}
+            {{ object.markdown_body|safe }}
         </p>
 
         <p class="text-right">Posté par <em>{{ object.author }}</em> le {{ object.date|date }}</p>
