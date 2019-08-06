@@ -1,5 +1,7 @@
 {% extends 'pkfrance/base.html' %}
 
+{% block title %}Articles et actualités{% endblock %}
+
 {% block content %}
     <div class="container mt-3">
         {% for article in object_list %}
@@ -19,7 +21,7 @@
                                 <a href="{{ article.get_absolute_url }}" class="btn btn-link ml-3 p-0">Voir plus</a>
                             </p>
 
-                            Poster le {{ article.date|date }} par <em>{{ article.author }}</em>
+                            Posté le {{ article.date|date }} par <em>{{ article.author }}</em>
 
                         </div>
                     </div>
