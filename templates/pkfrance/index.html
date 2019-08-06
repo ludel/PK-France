@@ -8,11 +8,11 @@
     Personnalisez à l’infini votre parc avec des dizaines d’espèces d’animaux disparus.
 {% endblock %}
 
+{% block on-index %}{% endblock %} <!-- enable indexing -->
+
 {% block head %}
     <link rel="stylesheet" href="{% static 'css/timeline.min.css' %}">
 {% endblock %}
-
-{% block on-index %}{% endblock %}
 
 {% block content %}
     <header>
@@ -113,7 +113,7 @@
                         </a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a class="text-success" href="/blog/article/2/">Présentation</a>
+                                <a class="text-success" href="{% url 'article' 1 %}">Présentation</a>
                             </h4>
                             <p class="card-text text-dark">
                                 Prehistoric Kingdom France est le centre de la communauté francophone du jeu de gestion Prehistoric Kingdom.
@@ -130,7 +130,7 @@
                         </a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a class="text-success" href="/blog/article/3">Gameplay</a>
+                                <a class="text-success" href="{% url 'article' 2 %}">Gameplay</a>
                             </h4>
                             <p class="card-text text-dark">
                                50 espèces sont disponibles, du Mésozoïque (dinosaures) au Cénozoïque (mammifères comme le Mammouth ou le Tigre à dents de sabre).
@@ -144,7 +144,7 @@
                         <a href="#"><img class="card-img-top" src="/media/article/2C8B8D.jpg" alt="Fonctionnalités"></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a class="text-success" href="/blog/article/4">Fonctionnalités</a>
+                                <a class="text-success" href="{% url 'article' 3 %}">Modes de jeu</a>
                             </h4>
                             <p class="card-text text-dark">
                                 Campagne: mécanique de jeu approfondie, déblocage de nouvelles espèces et événements climatiques 

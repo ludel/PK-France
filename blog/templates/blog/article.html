@@ -2,14 +2,20 @@
 
 {% block title %}Article {{ object.title }}{% endblock %}
 
+{% block description %}{{ object.summary }}{% endblock %}
+
+{% block on-index %}{% endblock %} <!-- enable indexing -->
+
+
 {% block content %}
     <div class="container mt-3">
 
         <!-- Page Heading/Breadcrumbs -->
-        <h1 class="mt-4 mb-3">
+        <h1 class="text-center mb-5">
             {{ object.title }}
         </h1>
-        <img class="img-fluid rounded float-left m-4" src="{{ object.image.url }}" alt="{{ object.title }}" width="450">
+
+        <img class="img-fluid rounded float-left mr-2" src="{{ object.image.url }}" alt="{{ object.title }}" width="450">
 
         <p class="lead">
             {{ object.markdown_body|safe }}
