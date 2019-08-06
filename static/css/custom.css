@@ -65,10 +65,6 @@ hr {
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
  */
 
-body {
-    padding-top: 4.25rem;
-}
-
 .carousel-item {
     height: 65vh;
     min-height: 300px;
