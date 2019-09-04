@@ -15,9 +15,11 @@
             {{ object.title }}
         </h1>
 
-        <img class="img-fluid rounded float-left mr-2" src="{{ object.image.url }}" alt="{{ object.title }}" width="450">
+        <div class="text-center">
+            <img class="img-fluid rounded" src="{{ object.image.url }}" alt="{{ object.title }}" width="100%">
+        </div>
 
-        <p class="lead">
+        <p class="lead pb-4">
             {{ object.markdown_body|safe }}
         </p>
 

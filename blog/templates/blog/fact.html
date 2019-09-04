@@ -1,7 +1,7 @@
 <hr class="w-50">
 
 <div class="container">
-    <h2 class="text-center pt-4 pb-4" id="timeline">Dino facts</h2>
+    <h2 class="text-center pt-4 pb-4" id="timeline">DINOFACT</h2>
 
     <div class="card mb-4">
         <div class="card-body">
@@ -10,14 +10,29 @@
                     <img class="card-img-top" src="{{ fact.image.url }}" alt="image dinosaure">
                 </div>
                 <div class="col-md-8 m-auto">
-                    <blockquote class="blockquote mb-0">
-                        <p>{{ fact.body }}</p>
-                        <footer class="blockquote-footer">
-                            Publié par <cite>{{ fact.author }}</cite> le <cite>{{ fact.date|date }}</cite>
-                        </footer>
-                    </blockquote>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+
+                                <blockquote class="blockquote mb-0 ">
+                                    <h4>{{ fact.body }}</h4>
+                                </blockquote>
+                            </th>
+                            <th>
+                                <a onclick="dino_fact()" class="btn btn-link">
+                                    <i class="fas fa-2x fa-arrow-right"></i>
+                                </a>
+                            </th>
+                        </tr>
+                        </thead>
+                    </table>
+
                 </div>
+
             </div>
         </div>
     </div>
+
+
 </div>

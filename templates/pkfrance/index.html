@@ -116,8 +116,10 @@
                                 <a class="text-success" href="{% url 'article' 1 %}">Présentation</a>
                             </h4>
                             <p class="card-text text-dark">
-                                Prehistoric Kingdom France est le centre de la communauté francophone du jeu de gestion Prehistoric Kingdom.
-                                Retrouvez toutes les infos et actualités sur le jeu, son gameplay et l’avancée de son développement.
+                                Prehistoric Kingdom France est le centre de la communauté francophone du jeu de gestion
+                                Prehistoric Kingdom.
+                                Retrouvez toutes les infos et actualités sur le jeu, son gameplay et l’avancée de son
+                                développement.
                                 Venez en discuter sur le forum !
                             </p>
                         </div>
@@ -133,8 +135,10 @@
                                 <a class="text-success" href="{% url 'article' 2 %}">Gameplay</a>
                             </h4>
                             <p class="card-text text-dark">
-                               50 espèces sont disponibles, du Mésozoïque (dinosaures) au Cénozoïque (mammifères comme le Mammouth ou le Tigre à dents de sabre).
-                               Elles sont débloquées et créées à partir de l’ADN extrait des fossiles, récoltés par des équipes de fouilles réparties partout dans le monde par le joueur.
+                                50 espèces sont disponibles, du Mésozoïque (dinosaures) au Cénozoïque (mammifères comme
+                                le Mammouth ou le Tigre à dents de sabre).
+                                Elles sont débloquées et créées à partir de l’ADN extrait des fossiles, récoltés par des
+                                équipes de fouilles réparties partout dans le monde par le joueur.
                             </p>
                         </div>
                     </div>
@@ -147,8 +151,10 @@
                                 <a class="text-success" href="{% url 'article' 3 %}">Modes de jeu</a>
                             </h4>
                             <p class="card-text text-dark">
-                                Campagne: mécanique de jeu approfondie, déblocage de nouvelles espèces et événements climatiques 
-                                - Scénario: missions aux scénarios préconçus, de la capture d’animaux en fuite au sauvetage de parc en perdition
+                                Campagne: mécanique de jeu approfondie, déblocage de nouvelles espèces et événements
+                                climatiques
+                                - Scénario: missions aux scénarios préconçus, de la capture d’animaux en fuite au
+                                sauvetage de parc en perdition
                             </p>
                         </div>
                     </div>
@@ -353,12 +359,13 @@
 
 {% block script %}
     <script>
-        $.ajax({
-            url: '{% url 'fact' %}',
-            dataType: 'html',
-            method: 'GET',
-        }).done(function (data) {
-            $("#fact").append(data);
-        });
+        function dino_fact() {
+            $('#fact').load("{% url 'fact' %}").hide().fadeIn('slow');
+        }
+
+        dino_fact();
+
+        setInterval(dino_fact, 5000);
+
     </script>
 {% endblock %}
