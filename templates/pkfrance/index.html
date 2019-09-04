@@ -359,13 +359,17 @@
 
 {% block script %}
     <script>
+        let fact_interval = setInterval(dino_fact, 8000);
+
         function dino_fact() {
-            $('#fact').load("{% url 'fact' %}").hide().fadeIn('slow');
+            $('#fact').fadeOut("slow").load("{% url 'fact' %}").fadeIn('slow');
+            clearInterval(fact_interval);
+            fact_interval = setInterval(dino_fact, 8000);
+
         }
 
         dino_fact();
 
-        setInterval(dino_fact, 8000);
 
     </script>
 {% endblock %}
