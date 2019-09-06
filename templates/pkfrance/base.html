@@ -53,14 +53,12 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                             <a class="dropdown-item" href="{% url 'index' %}#about">À propos</a>
-                            <a class="dropdown-item" href="{% url 'article' 1 %}">Gameplay</a>
-                            <a class="dropdown-item" href="{% url 'article' 2 %}">Modes de jeu</a>
+                            <a class="dropdown-item" href="{% url 'index' %}#dinofact">DinoFact</a>
                             <a class="dropdown-item" href="{% url 'index' %}#timeline">Timeline</a>
-                            <a class="dropdown-item" href="{% url 'index' %}#team">Team</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'articles' %}">Articles</a>
+                        <a class="nav-link" href="{% url 'articles' %}">Actualités</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"

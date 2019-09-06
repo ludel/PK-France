@@ -1,6 +1,6 @@
 {% extends 'pkfrance/base.html' %}
 
-{% block title %}Article {{ object.title }}{% endblock %}
+{% block title %}{{ object.title }}{% endblock %}
 
 {% block description %}{{ object.summary }}{% endblock %}
 
@@ -16,7 +16,7 @@
         </h1>
 
         <div class="text-center">
-            <img class="img-fluid rounded" src="{{ object.image.url }}" alt="{{ object.title }}" width="100%">
+            <img class="img-fluid rounded" src="{{ object.image_max.url }}" alt="{{ object.title }}" width="100%">
         </div>
 
         <p class="lead pb-4">

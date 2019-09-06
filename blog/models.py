@@ -13,7 +13,8 @@ class Article(models.Model):
     body = MarkdownxField()
     date = models.DateField('date published', auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.PROTECT)
-    image = ResizeImageField(size=[700, 400], upload_to='article')
+    image_min = ResizeImageField(size=[700, 400], upload_to='article')
+    image_max = ResizeImageField(size=[1100, 650], upload_to='article')
 
     def get_absolute_url(self):
         return reverse('article', args=[self.pk])
