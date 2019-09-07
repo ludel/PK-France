@@ -1,0 +1,73 @@
+{% extends 'pkfrance/base.html' %}
+{% load static %}
+
+{% block title %}Présentation du jeu de gestion{% endblock %}
+
+{% block description %}
+    Prehistoric Kingdom France est le centre de la **communauté francophone** de Prehistoric Kingdom.
+    Retrouvez toutes les infos et actualités du jeu, son gameplay et l’avancée de son développement. Venez en discuter
+    sur le forum !
+{% endblock %}
+
+{% block on-index %}{% endblock %} <!-- enable indexing -->
+
+
+{% block content %}
+    <div class="container mt-3">
+        <h1 class="mb-4 text-center">Présentation</h1>
+
+        <img class="img-fluid rounded" src="{% static 'img/article/max_presentation.jpg' %}" alt="Présentation du jeu"
+             width="100%">
+
+        <h2 class="font-weight-bold">PREHISTORIC KINGDOM FRANCE</h2>
+
+        <p>
+            Prehistoric Kingdom France est le centre de la <strong>communauté francophone</strong> de Prehistoric
+            Kingdom. Retrouvez toutes les infos et actualités du jeu, son gameplay et l’avancée de son développement.
+            Venez en discuter sur le forum !
+        </p>
+
+        <h2 class="font-weight-bold">LE MOT DES DÉVELOPPEURS</h2>
+
+        <p>
+            « Le projet est né d’une passion partagée pour les animaux disparus et pour les jeux de
+            simulation, alors que cette ‘niche’ particulière de jeux vidéo n’offrait que peu de contenu. Prehistoric
+            Kingdom ambitionne d’offrir à ses joueurs une expérience de jeu dont ils ne seront pas près de se
+            lasser.<br><br>
+
+            Inspiré par des classiques du genre comme <strong>Jurassic Park : Operation Genesis,
+            Zoo Tycoon 2</strong> ou le plus récent <strong>Jurassic World : Evolution</strong> ce projet en
+            reprend divers éléments afin que les joueurs puissent créer le zoo ultime de leurs rêves. »
+        </p>
+
+
+        <h2 class="font-weight-bold">DEMO PRE-ALPHA</h2>
+
+        <ul>
+            <li>
+                8 espèces de dinosaures : Tyrannosaurus, Triceratops, Gallimimus, Velociraptor, Dryosaurus, Allosaurus,
+                Camarasaurus, Stegosaurus
+            </li>
+
+            <li>50+ objets et décorations</li>
+
+            <li>1 map : « Ile méditerranéenne »</li>
+
+            <li>Mode Sandbox : argent illimité, pas de restriction de ressources ou de temps.</li>
+
+            <li>Terraforming et placement de végétation</li>
+
+            <li>Véhicules à conduire</li>
+
+            <li>Gestion basique des ressources : éoliennes et pompes hydrauliques pour apport en eau et électricité du
+                parc.
+            </li>
+
+            <li>Manipulation 3D pour déplacer, pivoter et modifier la taille des objets décoratifs</li>
+        </ul>
+
+        <a href="http://store.steampowered.com/app/666150/Prehistoric_Kingdom/">
+            Téléchargez la démo sur Steam
+        </a>
+    </div>
+{% endblock %}

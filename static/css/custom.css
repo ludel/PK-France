@@ -4,6 +4,14 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+h3 {
+    margin-top: 40px;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
 .text-blue {
     color: #22427C;
 }

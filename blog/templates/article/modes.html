@@ -1,0 +1,34 @@
+{% extends 'pkfrance/base.html' %}
+{% load static %}
+
+{% block title %}Modes de jeu{% endblock %}
+
+{% block description %}
+    Le jeu disposera à terme de quatre modes de jeu: Campagne, Scénario, Sandbox et Ranger
+{% endblock %}
+
+{% block on-index %}{% endblock %} <!-- enable indexing -->
+
+
+{% block content %}
+    <div class="container mt-3">
+        <h1 class="mb-4 text-center">Modes de jeu</h1>
+
+
+        <img class="img-fluid rounded" src="{% static 'img/article/max_modes.jpg' %}" alt="Modes de jeu" width="100%">
+
+        <h2 class="font-weight-bold">Campagne</h2>
+        <p>Mécanique de jeu approfondie, déblocage de nouvelles espèces et événements climatiques
+
+        <h2 class="font-weight-bold">Scénario</h2>
+        <p>Missions aux scénarios préconçus, de la capture d’animaux en fuite au sauvetage de parc en perdition</p>
+
+        <h2 class="font-weight-bold">Sandbox</h2>
+        <p>Possibilités illimitées : choix de la difficulté, de l’argent de départ, de la fréquence des
+            catastrophes…</p>
+
+        <h2 class="font-weight-bold">Ranger Mode</h2>
+        <p>Promenez-vous dans les allées de votre parc à la première personne (après la sortie finale)</p>
+
+    </div>
+{% endblock %}

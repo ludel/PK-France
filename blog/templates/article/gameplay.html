@@ -1,0 +1,78 @@
+{% extends 'pkfrance/base.html' %}
+{% load static %}
+
+{% block title %}Gameplay du jeu{% endblock %}
+
+{% block description %}
+    50 espèces seront disponibles, du Mésozoïque (dinosaures) au Cénozoïque (mammifères comme le
+    Mammouth ou le Tigre à dents de sabre). Elles sont débloquées et créées à partir de l’ADN extrait des fossiles,
+    récoltés par des équipes de fouilles réparties partout dans le monde par le joueur.
+{% endblock %}
+
+{% block on-index %}{% endblock %} <!-- enable indexing -->
+
+
+{% block content %}
+    <div class="container mt-3">
+
+        <h1 class="text-center mb-4">
+            Gameplay
+        </h1>
+
+        <img class="img-fluid rounded" src="{% static 'img/article/max_gameplay.jpg' %}" alt="Gameplay" width="100%">
+
+        <h2 class="font-weight-bold">Animaux</h2>
+        <p>
+            <span class="font-weight-bold">50 espèces</span> sont disponibles, du Mésozoïque (dinosaures) au Cénozoïque (mammifères comme le
+            Mammouth ou le Tigre à dents de sabre).<br>
+
+            Elles sont débloquées et <span class="font-weight-bold">créées à partir de l’ADN extrait des fossiles</span>, récoltés par des
+            équipes de fouilles réparties partout dans le monde par le joueur.
+
+            <br><br>
+            La taille, le sexe et la couleur des animaux sont <strong>personnalisables</strong>. Comportements, cris,
+            allure… ils ont été étudiés pour être représenté avec le plus de fidélité possible à la réalité
+            scientifique.
+            <br><br>
+
+            Les <strong>reptiles marins et reptiles volants</strong> seront peu à peu intégrés dans le jeu après sa
+            sortie finale
+            <br><br>
+
+        <h2 class="font-weight-bold">Décor</h2>
+
+        <p>
+            <strong>+100 éléments</strong> de construction disponibles, des bâtiments aux chemins, clôtures et
+            décorations. Les éléments de décors comme les rochers et les arbres peuvent être modifiés en taille, forme
+            ou inclinaison grâce à un <strong>outil de manipulation 3D</strong>. <br>La végétation, toujours modifiable,
+            diffère par défaut selon l’environnement choisi (aride, tropical, arctique…) Des outils de <strong>Terraforming</strong>
+            et de <strong>Terrapainting</strong> sont aussi à disposition pour créer toutes sortes de reliefs ainsi
+            qu’un <strong>Map editor</strong>.
+        </p>
+
+        <h2 class="font-weight-bold">Gestion</h2>
+
+        Il faudra aussi veiller aux <strong>finances</strong> du parc, au fonctionnement de ses
+        <strong>services</strong> et de ses <strong>attractions</strong>, via des interfaces de gestion très
+        détaillées (graphiques, statistiques…). Veiller à la satisfaction et la sécurité des
+        <strong>visiteurs</strong> et du <strong>staff</strong> pour augmenter la popularité du parc.
+
+        <br><br>
+        Un système de points débloquera des <strong>améliorations</strong> et de <strong>nouvelles
+        fonctionnalités</strong> au fur et à mesure de l’avancement du joueur.
+
+        <h2 class="font-weight-bold">Et +</h2>
+
+        <p>(Disponible dès la sortie du jeu)</p>
+
+        <ul>
+            <li>8 climats (Méditerranéen, Tropical humide, Tropical sec, Semi-aride, Polaire, Boréal, Tempéré océanique,
+                Tempéré continental)
+            </li>
+            <li>8 îles</li>
+            <li>32 textures de terrains</li>
+            <li>64 espèces d’arbres</li>
+        </ul>
+
+    </div>
+{% endblock %}

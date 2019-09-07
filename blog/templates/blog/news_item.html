@@ -8,7 +8,7 @@
 
 
 {% block content %}
-    <div class="container mt-3">
+    <div class="container mt-3 lead">
 
         <!-- Page Heading/Breadcrumbs -->
         <h1 class="text-center mb-5">
@@ -20,7 +20,7 @@
         </div>
 
         <p class="lead pb-4">
-            {{ object.markdown_body|safe }}
+            {{ object.body|safe }}
         </p>
 
         <p class="text-right">Posté par <em>{{ object.author }}</em> le {{ object.date|date }}</p>
