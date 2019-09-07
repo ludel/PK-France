@@ -8,7 +8,9 @@ __pycache__/
 # C extensions
 *.so
 
+# style files
 media/
+staticfiles
 
 # Distribution / packaging
 .Python
