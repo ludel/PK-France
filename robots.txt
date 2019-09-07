@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /$
+Allow: blog/article/presentation/
+Allow: blog/article/gameplay/
+Allow: blog/article/modes/
+Allow: /sitemap.xml
+Sitemap: https://onregardequoi.net/sitemap.xml
+Disallow: /blog/news/
