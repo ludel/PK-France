@@ -16,7 +16,7 @@
 
 {% block content %}
     <header>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide lazy" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -30,34 +30,44 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active" style="background-image: url('{% static 'img/gallery/1.jpg' %}')">
+                <div class="carousel-item active">
+                    <img class="d-block h-100" src="{% static 'img/gallery/1.jpg' %}" alt="Forêt">
                 </div>
 
-                <div class="carousel-item" style="background-image: url('{% static 'img/gallery/2.jpg' %}')">
+                <div class="carousel-item">
+                    <img class="d-block h-100" data-src="{% static 'img/gallery/2.jpg' %}" alt="Deuxieme diapo">
                 </div>
 
-                <div class="carousel-item" style="background-image: url('{% static 'img/gallery/3.jpg' %}')">
+                <div class="carousel-item">
+                    <img class="d-block h-100" data-src="{% static 'img/gallery/3.jpg' %}" alt="triceratops">
                 </div>
 
-                <div class="carousel-item" style="background-image: url('{% static 'img/gallery/4.jpg' %}')">
+                <div class="carousel-item">
+                    <img class="d-block h-100" data-src="{% static 'img/gallery/4.jpg' %}" alt="Enclos">
                 </div>
 
-                <div class="carousel-item" style="background-image: url('{% static 'img/gallery/5.jpg' %}')">
+                <div class="carousel-item">
+                    <img class="d-block h-100" data-src="{% static 'img/gallery/5.jpg' %}" alt="T rex">
                 </div>
 
-                <div class="carousel-item" style="background-image: url('{% static 'img/gallery/6.jpg' %}')">
+                <div class="carousel-item">
+                    <img class="d-block h-100" data-src="{% static 'img/gallery/6.jpg' %}" alt="Dinosaure">
                 </div>
 
-                <div class="carousel-item" style="background-image: url('{% static 'img/gallery/7.jpg' %}')">
+                <div class="carousel-item">
+                    <img class="d-block h-100" data-src="{% static 'img/gallery/7.jpg' %}" alt="Enclos de dino">
                 </div>
 
-                <div class="carousel-item" style="background-image: url('{% static 'img/gallery/8.jpg' %}')">
+                <div class="carousel-item">
+                    <img class="d-block h-100" data-src="{% static 'img/gallery/8.jpg' %}" alt="Voiture et immeuble">
                 </div>
 
-                <div class="carousel-item" style="background-image: url('{% static 'img/gallery/9.jpg' %}')">
+                <div class="carousel-item">
+                    <img class="d-block h-100" data-src="{% static 'img/gallery/9.jpg' %}" alt="T rex et une voiture">
                 </div>
 
-                <div class="carousel-item" style="background-image: url('{% static 'img/gallery/10.jpg' %}')">
+                <div class="carousel-item">
+                    <img class="d-block h-100" data-src="{% static 'img/gallery/10.jpg' %}" alt="Balade">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -106,7 +116,8 @@
                 <div class="col-lg-4 col-sm-6 portfolio-item mb-3">
                     <div class="card h-100">
                         <a href="#">
-                            <img class="card-img-top" src="{% static 'img/article/min_presentation.jpg' %}" alt="Présentation du jeu">
+                            <img class="card-img-top" src="{% static 'img/article/min_presentation.jpg' %}"
+                                 alt="Présentation du jeu">
                         </a>
                         <div class="card-body">
                             <h4 class="card-title">
@@ -142,7 +153,8 @@
                 </div>
                 <div class="col-lg-4 col-sm-6 portfolio-item mb-3">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="{% static 'img/article/min_modes.jpg' %}" alt="Fonctionnalités"></a>
+                        <a href="#"><img class="card-img-top" src="{% static 'img/article/min_modes.jpg' %}"
+                                         alt="Fonctionnalités"></a>
                         <div class="card-body">
                             <h4 class="card-title">
                                 <a class="text-success" href="{% url 'article_modes' %}">Modes de jeu</a>
@@ -355,6 +367,8 @@
 {% endblock %}
 
 {% block script %}
+
+
     <script>
         let fact_interval = setInterval(dino_fact, 8000);
 
@@ -364,9 +378,13 @@
             fact_interval = setInterval(dino_fact, 8000);
 
         }
-
         dino_fact();
 
+        $(".lazy").on("slide.bs.carousel", function (ev) {
+            let lazy = $(ev.relatedTarget).find("img[data-src]");
+            lazy.attr("src", lazy.data('src'));
+            lazy.removeAttr("data-src");
+        });
 
     </script>
 {% endblock %}
