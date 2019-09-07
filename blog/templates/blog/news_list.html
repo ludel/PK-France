@@ -10,7 +10,8 @@
                     <div class="row">
                         <div class="col-lg-4 m-auto">
                             <a href="{{ article.get_absolute_url }}">
-                                <img class="img-fluid rounded " src="{{ article.image_min.url }}" alt="{{ article.title }}">
+                                <img class="img-fluid rounded " src="{{ article.image_min.url }}"
+                                     alt="{{ article.title }}">
                             </a>
                         </div>
                         <div class="col-lg-8">
@@ -27,7 +28,12 @@
                     </div>
                 </div>
             </div>
-
+        {% empty %}
+            <div class="text-center">
+                <h1 class="mb-4">Aucun article disponible</h1>
+                <iframe src="https://giphy.com/embed/J3kssQxpxEofe" width="480" height="375"
+                        class="giphy-embed" allowFullScreen></iframe>
+            </div>
         {% endfor %}
     </div>
 {% endblock %}
