@@ -31,8 +31,15 @@
         {% empty %}
             <div class="text-center">
                 <h1 class="mb-4">Aucun article disponible</h1>
-                <iframe src="https://giphy.com/embed/J3kssQxpxEofe" width="480" height="375"
-                        class="giphy-embed" allowFullScreen></iframe>
+                <div class="row justify-content-md-center">
+                    <div class="col col-lg-2">
+                    </div>
+                    <div class="col-md-auto">
+                        <img src="https://i.giphy.com/media/J3kssQxpxEofe/source.gif" width="100%" alt="empty news">
+                    </div>
+                    <div class="col col-lg-2">
+                    </div>
+                </div>
             </div>
         {% endfor %}
     </div>
