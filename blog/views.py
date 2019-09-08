@@ -1,21 +1,23 @@
 import random
 
+from django.http import JsonResponse
 from django.shortcuts import get_list_or_404
-from django.shortcuts import render
 from django.views import View
 
 from blog.models import Fact
 
 
 class FactView(View):
-    template_name = 'blog/fact.html'
 
     def get(self, request):
         payload = {}
+
         if request.is_ajax():
             facts = get_list_or_404(Fact)
 
             rand = random.randint(0, len(facts) - 1)
-            payload['fact'] = facts[rand]
+            fact = facts[rand]
+            payload['body'] = fact.body
+            payload['image'] = fact.image.url
 
-        return render(request, self.template_name, payload)
+        return JsonResponse(payload)

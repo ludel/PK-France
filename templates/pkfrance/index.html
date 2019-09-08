@@ -102,7 +102,45 @@
         </p>
 
     </div>
-    <div id="fact"></div>
+    <div id="fact">
+        <hr class="w-50">
+
+        <div class="container">
+            <h2 class="text-center pt-4 pb-4" id="dinofact">DINOFACT</h2>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="card-img-top" src="" id="fact-image" alt="image fact">
+                        </div>
+                        <div class="col-md-8 m-auto">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>
+
+                                        <blockquote class="blockquote mb-0 ">
+                                            <h4 id="fact-body"></h4>
+                                        </blockquote>
+                                    </th>
+                                    <th>
+                                        <a onclick="dino_fact()" class="btn btn-link">
+                                            <i class="fas fa-2x fa-arrow-right"></i>
+                                        </a>
+                                    </th>
+                                </tr>
+                                </thead>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
 
@@ -373,11 +411,17 @@
         let fact_interval = setInterval(dino_fact, 8000);
 
         function dino_fact() {
-            $('#fact').fadeOut("slow").load("{% url 'fact' %}").fadeIn('slow');
+            $.ajax({
+                url: "{% url 'fact' %}",
+                method: 'GET',
+            }).done(function (data) {
+                $("#fact-body").html(data['body']);
+                $("#fact-image").attr('src', data['image']);
+            });
             clearInterval(fact_interval);
             fact_interval = setInterval(dino_fact, 8000);
-
         }
+
         dino_fact();
 
         $(".lazy").on("slide.bs.carousel", function (ev) {
