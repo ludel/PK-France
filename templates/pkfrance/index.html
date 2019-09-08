@@ -31,43 +31,53 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                    <img class="d-block h-100" src="{% static 'img/gallery/1.jpg' %}" alt="Forêt">
+                    <img class="d-block" data-src="{% static 'img/gallery/1.jpg' %}" width="100%" height="100%"
+                         data-src-mobile="{% static 'img/gallery/1-mobile.jpg' %}" alt="Forêt" id="first-carousel">
                 </div>
 
                 <div class="carousel-item">
-                    <img class="d-block h-100" data-src="{% static 'img/gallery/2.jpg' %}" alt="Deuxieme diapo">
+                    <img class="d-block" data-src="{% static 'img/gallery/2.jpg' %}" width="100%" height="100%"
+                         data-src-mobile="{% static 'img/gallery/2-mobile.jpg' %}" alt="Deuxieme diapo">
                 </div>
 
                 <div class="carousel-item">
-                    <img class="d-block h-100" data-src="{% static 'img/gallery/3.jpg' %}" alt="triceratops">
+                    <img class="d-block" data-src="{% static 'img/gallery/3.jpg' %}" width="100%" height="100%"
+                         data-src-mobile="{% static 'img/gallery/3-mobile.jpg' %}" alt="triceratops">
                 </div>
 
                 <div class="carousel-item">
-                    <img class="d-block h-100" data-src="{% static 'img/gallery/4.jpg' %}" alt="Enclos">
+                    <img class="d-block" data-src="{% static 'img/gallery/4.jpg' %}" width="100%" height="100%"
+                         data-src-mobile="{% static 'img/gallery/4-mobile.jpg' %}" alt="Enclos">
                 </div>
 
                 <div class="carousel-item">
-                    <img class="d-block h-100" data-src="{% static 'img/gallery/5.jpg' %}" alt="T rex">
+                    <img class="d-block" data-src="{% static 'img/gallery/5.jpg' %}" width="100%" height="100%"
+                         data-src-mobile="{% static 'img/gallery/5-mobile.jpg' %}" alt="T rex">
                 </div>
 
                 <div class="carousel-item">
-                    <img class="d-block h-100" data-src="{% static 'img/gallery/6.jpg' %}" alt="Dinosaure">
+                    <img class="d-block" data-src="{% static 'img/gallery/6.jpg' %}" width="100%" height="100%"
+                         data-src-mobile="{% static 'img/gallery/6-mobile.jpg' %}" alt="Dinosaure">
                 </div>
 
                 <div class="carousel-item">
-                    <img class="d-block h-100" data-src="{% static 'img/gallery/7.jpg' %}" alt="Enclos de dino">
+                    <img class="d-block" data-src="{% static 'img/gallery/7.jpg' %}" width="100%" height="100%"
+                         data-src-mobile="{% static 'img/gallery/7-mobile.jpg' %}" alt="Enclos de dino">
                 </div>
 
                 <div class="carousel-item">
-                    <img class="d-block h-100" data-src="{% static 'img/gallery/8.jpg' %}" alt="Voiture et immeuble">
+                    <img class="d-block" data-src="{% static 'img/gallery/8.jpg' %}" width="100%" height="100%"
+                         data-src-mobile="{% static 'img/gallery/8-mobile.jpg' %}" alt="Voiture et immeuble">
                 </div>
 
                 <div class="carousel-item">
-                    <img class="d-block h-100" data-src="{% static 'img/gallery/9.jpg' %}" alt="T rex et une voiture">
+                    <img class="d-block" data-src="{% static 'img/gallery/9.jpg' %}" width="100%" height="100%"
+                         data-src-mobile="{% static 'img/gallery/9-mobile.jpg' %}" alt="T rex et une voiture">
                 </div>
 
                 <div class="carousel-item">
-                    <img class="d-block h-100" data-src="{% static 'img/gallery/10.jpg' %}" alt="Balade">
+                    <img class="d-block" data-src="{% static 'img/gallery/10.jpg' %}" width="100%" height="100%"
+                         data-src-mobile="{% static 'img/gallery/10-mobile.jpg' %}" alt="Balade">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -422,12 +432,22 @@
             fact_interval = setInterval(dino_fact, 8000);
         }
 
+        function lazy_carousel(element) {
+            if (window.matchMedia("only screen and (max-width: 760px)").matches)
+                element.attr("src", element.data('src-mobile'));
+            else
+                element.attr("src", element.data('src'));
+
+            element.removeAttr("data-src").removeAttr("data-src-mobile");
+        }
+
+
         dino_fact();
+        lazy_carousel($("#first-carousel"));
 
         $(".lazy").on("slide.bs.carousel", function (ev) {
             let lazy = $(ev.relatedTarget).find("img[data-src]");
-            lazy.attr("src", lazy.data('src'));
-            lazy.removeAttr("data-src");
+            lazy_carousel(lazy)
         });
 
     </script>
