@@ -24,8 +24,8 @@ SECRET_KEY = 'a7w&m_mnp$xsez$$y#$gyr0fn2x5qfi0-&45)ft)0a#ru$@sx*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG') == 'true'
 
-ALLOWED_HOSTS = ['pk-france.com', '127.0.0.1']
-
+ALLOWED_HOSTS = ('pk-france.com', '127.0.0.1')
+INTERNAL_IPS = ('127.0.0.1', )
 # Application definition
 
 INSTALLED_APPS = [
