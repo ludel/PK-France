@@ -8,7 +8,7 @@
 
 
 {% block content %}
-    <div class="container mt-3 lead">
+    <div class="container mt-3">
 
         <!-- Page Heading/Breadcrumbs -->
         <h1 class="text-center mb-5">
@@ -19,9 +19,9 @@
             <img class="img-fluid rounded" src="{{ object.image_max.url }}" alt="{{ object.title }}" width="100%">
         </div>
 
-        <p class="lead pb-4">
+        <div class="lead container">
             {{ object.body|safe }}
-        </p>
+        </div>
 
         <p class="text-right">Posté par <em>{{ object.author }}</em> le {{ object.date|date }}</p>
 
