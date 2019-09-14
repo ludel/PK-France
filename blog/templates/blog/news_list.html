@@ -15,9 +15,11 @@
                             </a>
                         </div>
                         <div class="col-lg-8">
-                            <h2 class="card-title">
-                                {{ article.title }}
-                            </h2>
+                            <a href="{{ article.get_absolute_url }}" class="btn btn-link pl-0 text-dark">
+                                <h2 class="card-title">
+                                    {{ article.title }}
+                                </h2>
+                            </a>
                             <p class="card-text">{{ article.summary }}
                                 <a href="{{ article.get_absolute_url }}" class="btn btn-link ml-3 p-0">Voir plus</a>
                             </p>
