@@ -14,6 +14,9 @@ class News(models.Model):
     image_min = ResizeImageField(size=[700, 400], upload_to='article')
     image_max = ResizeImageField(size=[1100, 650], upload_to='article')
 
+    class Meta:
+        ordering = ['-date']
+
     def get_absolute_url(self):
         return reverse('article', args=[self.pk])
 
