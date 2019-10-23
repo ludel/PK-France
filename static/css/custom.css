@@ -62,6 +62,25 @@ hr {
     background-color: #96c23a;
 }
 
+.facebook {
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+.facebook:hover, .facebook:active {
+    background-color: #353c75;
+    border-color: #353c75;
+}
+
+.instagram {
+    background-color: #fd1d1d;
+    border-color: #fd1d1d;
+}
+
+.instagram:hover, .instagram:active {
+    background-color: #be1b1b;
+    border-color: #be1b1b;
+}
 
 /*!
  * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
